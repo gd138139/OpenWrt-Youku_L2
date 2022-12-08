@@ -36,12 +36,12 @@ Auto build OpenWrt firmware for Youku L2 via GitHub Actions
 
 |  luci-app-ddns  |  支持动态域名  |
 
-|  luci-app-vlmcsd  |  KMS支持windows激活  |
+|  luci-app-vlmcsd  |  KMS支持windows激活(需手动安装)   |
 
 |  luci-app-upnp  |  支持UDP  |
 
 |  luci-app-vsftpd  |  支持ssh和文件访问  |
 
-|  luci-app-alist  |  支持alist多种网盘映射webadv  |
+|  luci-app-alist  |  支持alist多种网盘映射webadv(需手动安装)  |
 
 |  ipv6helper  |  支持 iPv6  |
