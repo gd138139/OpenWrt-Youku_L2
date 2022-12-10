@@ -38,6 +38,8 @@ Auto build OpenWrt firmware for Youku L2 via GitHub Actions
 
 |  luci-app-nlbwmon  |  网络带宽监视器  |
 
+|  luci-app-adbyby-plus    |   广告屏蔽大师Plus +  |
+
 以下全部取消
 
 |  luci-app-wifischedule    |  WiFi 计划   |
@@ -45,8 +47,6 @@ Auto build OpenWrt firmware for Youku L2 via GitHub Actions
 |  luci-app-alist  |  支持alist多种网盘映射webadv(需手动安装)  |
 
 |  luci-app-filetransfer  |  文件传输（可web安装ipk包）  |
-
-|  luci-app-adbyby-plus    |   广告屏蔽大师Plus +  |
 
 |  luci-app-syncdial    |  多拨虚拟网卡（原macvlan）  |
 
