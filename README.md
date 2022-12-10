@@ -20,13 +20,17 @@ Auto build OpenWrt firmware for Youku L2 via GitHub Actions
 
 |  luci-app-vsftpd  |  支持ssh和文件访问  |
 
+|  luci-app-turboacc  |  网络加速设置  |
+
+|  luci-app-ser2net | USB支持COM端口转TCP |
+
+|  luci-app-usb-printer  |  USB云打印接口  |
+
+|  luci-app-arpbind  |  ARP绑定  |
+
 以下全部取消
 
 |  luci-app-wifischedule    |  WiFi 计划   |
-
-|  luci-app-turboacc  |  网络加速设置  |
-
-|  luci-app-ser2net | 支持COM端口转TCP |
 
 |  luci-app-ddns  |  支持动态域名  |
 
