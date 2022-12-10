@@ -26,25 +26,25 @@ Auto build OpenWrt firmware for Youku L2 via GitHub Actions
 
 |  luci-app-usb-printer  |  USB云打印接口  |
 
+|  luci-app-vlmcsd  |  KMS支持windows激活(需手动安装)   |
+
+|  luci-app-accesscontrol  |  访问时间控制  |
+
 |  luci-app-arpbind  |  ARP绑定  |
+
+|  luci-app-ddns  |  支持动态域名  |
+
+|  luci-app-upnp  |  支持UDP  |
+
+|  luci-app-nlbwmon  |  网络带宽监视器  |
 
 以下全部取消
 
 |  luci-app-wifischedule    |  WiFi 计划   |
 
-|  luci-app-ddns  |  支持动态域名  |
-
-|  luci-app-vlmcsd  |  KMS支持windows激活(需手动安装)   |
-
-|  luci-app-upnp  |  支持UDP  |
-
 |  luci-app-alist  |  支持alist多种网盘映射webadv(需手动安装)  |
 
-|  luci-app-accesscontrol  |  访问时间控制  |
-
 |  luci-app-filetransfer  |  文件传输（可web安装ipk包）  |
-
-|  luci-app-nlbwmon  |  网络带宽监视器  |
 
 |  luci-app-adbyby-plus    |   广告屏蔽大师Plus +  |
 
