@@ -26,7 +26,7 @@ Auto build OpenWrt firmware for Youku L2 via GitHub Actions
 
 |  luci-app-usb-printer  |  USB云打印接口  |
 
-|  luci-app-vlmcsd  |  KMS支持windows激活(需手动安装)   |
+|  luci-app-vlmcsd  |  KMS支持windows激活   |
 
 |  luci-app-accesscontrol  |  访问时间控制  |
 
