@@ -22,6 +22,8 @@ env:
   TZ: Asia/Shanghai
 
 on:
+  repository_dispatch:
+  workflow_dispatch:
   schedule:
     - cron: '0 21 * * 6'
 
