@@ -23,9 +23,8 @@ sed -i 's/bootstrap/argonne/g' feeds/luci/modules/luci-base/root/etc/config/luci
 # Modify aria2
 sed -i 's/+ariang//g'  feeds/luci/applications/luci-app-aria2/Makefile
 
-# Devel Configurations
-echo '# Devel Configurations' >> .config
-echo 'CONFIG_DEVEL=y' >> .config
+# Rom Size
+echo '# Rom Size' >> .config
 echo 'CONFIG_TARGET_KERNEL_PARTSIZE=64' >> .config
 echo 'CONFIG_TARGET_ROOTFS_PARTSIZE=800' >> .config
 
