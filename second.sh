@@ -13,14 +13,8 @@ sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/files/bin/config_genera
 sed -i 's/OpenWrt/Cnbbx/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 sed -i 's/OpenWrt/Cnbbx/g' package/base-files/files/bin/config_generate
 
-# 取消开机禁用WIFI
+# Cancel power on and disable WIFI
 sed -i '/set wireless.radio${devidx}.disabled/d' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-
-# Modify the version number
-sed -i '/DISTRIB_REVISION/d' package/base-files/files/etc/openwrt_release
-echo "DISTRIB_REVISION='R22.03" >> package/base-files/files/etc/openwrt_release
-sed -i '/DISTRIB_DESCRIPTION/d' package/base-files/files/etc/openwrt_release
-echo "DISTRIB_DESCRIPTION='cnbbx build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt '" >> package/base-files/files/etc/openwrt_release
 
 # Modify default theme
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
@@ -29,8 +23,20 @@ sed -i 's/bootstrap/argonne/g' feeds/luci/modules/luci-base/root/etc/config/luci
 # Modify aria2
 sed -i 's/+ariang//g'  feeds/luci/applications/luci-app-aria2/Makefile
 
-# 扩容32M
-sed -i 's/16064k/32448k/g'  target/linux/ramips/image/mt7621.mk
+# Devel Configurations
+echo '# Devel Configurations' >> .config
+echo 'CONFIG_DEVEL=y' >> .config
+echo 'CONFIG_TARGET_KERNEL_PARTSIZE=64' >> .config
+echo 'CONFIG_TARGET_ROOTFS_PARTSIZE=800' >> .config
+
+# Modify the version number
+echo '# Image Configurations' >> .config
+echo 'CONFIG_IMAGEOPT=y' >> .config
+echo 'CONFIG_VERSIONOPT=y' >> .config
+echo "CONFIG_VERSION_NUMBER='Cnbbx build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt '" >> .config
+echo 'CONFIG_VERSION_DIST="Cnbbx"' >> .config
+echo 'CONFIG_VERSION_FILENAMES=y' >> .config
+echo 'CONFIG_VERSION_HOME_URL="http://youku.i.cnbbx.com/"' >> .config
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
