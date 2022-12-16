@@ -12,6 +12,8 @@ sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/files/bin/config_genera
 # Modify hostname
 sed -i 's/OpenWrt/Cnbbx/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 sed -i 's/OpenWrt/Cnbbx/g' package/base-files/files/bin/config_generate
+
+# 取消开机禁用WIFI
 sed -i '/set wireless.radio${devidx}.disabled/d' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # Modify the version number
@@ -26,6 +28,9 @@ sed -i 's/bootstrap/argonne/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 # Modify aria2
 sed -i 's/+ariang//g'  feeds/luci/applications/luci-app-aria2/Makefile
+
+# 扩容32M
+sed -i 's/16064k/32448k/g'  target/linux/ramips/image/mt7621.mk
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
