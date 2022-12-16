@@ -25,16 +25,16 @@ sed -i 's/+ariang//g'  feeds/luci/applications/luci-app-aria2/Makefile
 
 # Rom Size
 echo '# Rom Size' >> .config
-echo 'CONFIG_TARGET_KERNEL_PARTSIZE=64' >> .config
-echo 'CONFIG_TARGET_ROOTFS_PARTSIZE=800' >> .config
+echo 'CONFIG_TARGET_KERNEL_PARTSIZE=16' >> .config
+echo 'CONFIG_TARGET_ROOTFS_PARTSIZE=32' >> .config
 
 # Modify the version number
 echo '# Image Configurations' >> .config
-echo 'CONFIG_IMAGEOPT=y' >> .config
 echo 'CONFIG_VERSIONOPT=y' >> .config
-echo "CONFIG_VERSION_NUMBER='Cnbbx build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt R22.03'" >> .config
+echo 'CONFIG_IMAGEOPT=y' >> .config
 echo 'CONFIG_VERSION_DIST="Cnbbx"' >> .config
-echo 'CONFIG_VERSION_FILENAMES=y' >> .config
+echo "CONFIG_VERSION_NUMBER='Cnbbx build $(TZ=UTC-8 date "+%Y.%m.%d") @ '" >> .config
+echo 'CONFIG_VERSION_CODE="OpenWrt R22.03"' >> .config
 echo 'CONFIG_VERSION_HOME_URL="http://youku.i.cnbbx.com/"' >> .config
 
 # Add kernel build user
