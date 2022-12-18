@@ -20,8 +20,9 @@ sed -i '/set wireless.radio${devidx}.disabled/d' package/kernel/mac80211/files/l
 sed -i 's/luci-theme-bootstrap/luci-theme-argonne/g' feeds/luci/collections/luci/Makefile
 sed -i 's/bootstrap/argonne/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
-# Modify aria2
+# Modify Packages
 sed -i 's/+ariang//g'  feeds/luci/applications/luci-app-aria2/Makefile
+sed -i 's/+alist//g'  feeds/luciPackages/applications/luci-app-alist/Makefile
 
 # Rom Size
 echo '# Rom Size' >> .config
