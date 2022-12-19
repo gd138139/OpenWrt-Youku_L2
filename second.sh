@@ -30,6 +30,12 @@ echo 'CONFIG_TARGET_KERNEL_PARTSIZE=16' >> .config
 echo 'CONFIG_TARGET_ROOTFS_PARTSIZE=32' >> .config
 
 # Modify the version number
+sed -i '/CONFIG_IMAGEOPT/d' .config
+sed -i '/CONFIG_VERSIONOPT/d' .config
+sed -i '/CONFIG_VERSION_DIST/d' .config
+sed -i '/CONFIG_VERSION_NUMBER/d' .config
+sed -i '/CONFIG_VERSION_CODE/d' .config
+sed -i '/CONFIG_VERSION_HOME_URL/d' .config
 echo '# Image Configurations' >> .config
 echo 'CONFIG_IMAGEOPT=y' >> .config
 echo 'CONFIG_VERSIONOPT=y' >> .config
