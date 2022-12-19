@@ -37,7 +37,12 @@ echo 'CONFIG_VERSION_DIST="Cnbbx"' >> .config
 echo 'CONFIG_VERSION_NUMBER="R22.03"' >> .config
 echo "CONFIG_VERSION_CODE=\"build $(TZ=UTC-8 date "+%Y.%m.%d")"\" >> .config
 echo 'CONFIG_VERSION_HOME_URL="http://youku.i.cnbbx.com/"' >> .config
-sed -i '/version/d' feeds/luci/modules/luci-base/src/Makefile
+
+# LEDE在4年前留下的篡改版本
+sed -i '/version.lua:/d' feeds/luci/modules/luci-base/src/Makefile
+sed -i '/mkversion.sh/d' feeds/luci/modules/luci-base/src/Makefile
+sed -i '/cp version.lua/d' feeds/luci/modules/luci-base/src/Makefile
+sed -i 's/version.lua//g'  feeds/luci/modules/luci-base/src/Makefile
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
