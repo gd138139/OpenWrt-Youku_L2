@@ -31,11 +31,11 @@ echo 'CONFIG_TARGET_ROOTFS_PARTSIZE=32' >> .config
 
 # Modify the version number
 echo '# Image Configurations' >> .config
-echo 'CONFIG_VERSIONOPT=y' >> .config
 echo 'CONFIG_IMAGEOPT=y' >> .config
+echo 'CONFIG_VERSIONOPT=y' >> .config
 echo 'CONFIG_VERSION_DIST="Cnbbx"' >> .config
-echo 'CONFIG_VERSION_NUMBER=20221212' >> .config
-echo "CONFIG_VERSION_CODE='build $(TZ=UTC-8 date "+%Y.%m.%d")'" >> .config
+echo 'CONFIG_VERSION_NUMBER="R22.03"' >> .config
+echo "CONFIG_VERSION_CODE=\"build $(TZ=UTC-8 date "+%Y.%m.%d")"\" >> .config
 echo 'CONFIG_VERSION_HOME_URL="http://youku.i.cnbbx.com/"' >> .config
 
 # Add kernel build user
