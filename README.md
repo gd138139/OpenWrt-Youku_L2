@@ -1,5 +1,5 @@
 # OpenWrt-Youku_L2
-Auto build OpenWrt firmware for Youku L2 via GitHub Actions
+Auto build OpenWrt firmware for Youku L2 GitHub Actions
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cnbbx/OpenWrt-Youku_L2?style=for-the-badge&label=Download)](https://github.com/cnbbx/OpenWrt-Youku_L2/releases/latest)
 
@@ -40,8 +40,6 @@ Auto build OpenWrt firmware for Youku L2 via GitHub Actions
 
 |  luci-app-adbyby-plus    |   广告屏蔽大师Plus +  |
 
-以下全部取消
-
 |  luci-app-wifischedule    |  WiFi 计划   |
 
 |  luci-app-alist  |  支持alist多种网盘映射webadv(需手动安装)  |
@@ -53,4 +51,4 @@ Auto build OpenWrt firmware for Youku L2 via GitHub Actions
 |  luci-app-mwan3    |  MWAN3负载均衡  |
 
 
-完整版本请去链接:https://pan.baidu.com/s/1w-oloiBeuVmmTHuOYSgLVQ?pwd=sxws 提取码:sxws 复制这段内容后打开百度网盘手机App，操作更方便哦  下载2022-06-06版本
+完整版本请去链接:https://pan.baidu.com/s/1w-oloiBeuVmmTHuOYSgLVQ?pwd=sxws 提取码:sxws 复制这段内容后打开百度网盘手机App，操作更方便哦  下载2022-12-20版本
