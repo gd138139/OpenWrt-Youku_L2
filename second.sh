@@ -8,6 +8,7 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.0./192.168.11./g' feeds/luciPackages/applications/luci-app-pptp-server/root/etc/config/pptpd
 
 # Modify hostname
 sed -i 's/OpenWrt/Cnbbx/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
