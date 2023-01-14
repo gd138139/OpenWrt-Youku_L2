@@ -21,11 +21,14 @@ env:
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
 
+#on:
+#  repository_dispatch:
+#  workflow_dispatch:
+#  schedule:
+#    - cron: '0 5 * * 1'
 on:
-  repository_dispatch:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 5 * * 1'
+  push:
+  
 
 jobs:
   build:
